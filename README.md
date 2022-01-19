@@ -12,6 +12,19 @@ Although in the case of receipts or invoices, converting line items from JSON to
 - Sample receipt
 
 ## Steps
+### Step 1: Setting up the environment
+Creat a new Resource Group in your Azure Subscription and provision the followng resources:
+- Storage Account
+- Logic App
+- Form Recognizer 
+
+![image](https://user-images.githubusercontent.com/88718044/150129298-2143e27a-0733-4eea-90fc-505f8fbddda4.png)
+
+You can also deploy the required resources using this ARM template:
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/)
+
+### Step 2: Setting up the Logic App
 
 
 ## License
