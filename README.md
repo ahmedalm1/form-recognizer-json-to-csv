@@ -131,11 +131,13 @@ You can also deploy the required resources using this ARM template:
 
 3. Wait for the Logic App flow to finish. 
 
-<img>
+![image](https://user-images.githubusercontent.com/88718044/150165394-d6f4675e-d563-462a-bd40-d4cc64f89806.png)
 
-4. The resulted CSV file will contain the all line items from the receipt.
+4. The resulted CSV file will contain all line items from the receipt.
 
-<img>
+![image](https://user-images.githubusercontent.com/88718044/150165472-b10accb5-f2ca-46f2-85b8-0db05dfb0562.png)
+
+![image](https://user-images.githubusercontent.com/88718044/150165654-eb0acc24-fc4a-417f-95ff-2f637967d7b6.png)
 
 ## License
 For all licensing information refer to [LICENSE]().
