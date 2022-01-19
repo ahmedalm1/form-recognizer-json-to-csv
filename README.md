@@ -1,4 +1,4 @@
-# Storing Receipt Line-items Extracted Using Form Recognizer in CSV Format
+# Converting receipt line-items extracted using Form Recognizer from JSON to CSV format
 
 By default, results from Form Recognizer are generated in JSON format, which is a great way of storing the information extracted from the scanned documents. Typically, converting that JSON output to CSV format is a straightforward process, which then can be used in further analysis in Power BI for example. One way of acheiving that conversion is by using Form Recognizer REST API with Python, which can be found here in this repo [Quickstart: Extract invoice data using the Form Recognizer REST API with Python](https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/python/FormRecognizer/rest/python-invoices.md).
 
