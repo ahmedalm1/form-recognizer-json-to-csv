@@ -47,7 +47,7 @@ You can also deploy the required resources using this ARM template:
 
 6. Fill in the information and click on New step to proceed.
 
-![image](https://user-images.githubusercontent.com/88718044/150134797-4f6b7bd6-1cb6-4871-a876-156673e3c990.png)
+![image](https://user-images.githubusercontent.com/88718044/150160238-3158d125-d525-48e7-afa3-748c2aa8d400.png)
 
 7. Search for "Form Recognizer" and select "Analyze Receipt" from the list of actions.
 
@@ -91,7 +91,7 @@ You can also deploy the required resources using this ARM template:
 {
   "item": "<Item field value Name>",
   "price": "<Item field value Price>",
-  "quantity": "<Item field value Quantity>"
+  "quantity": "<Item field value Quantity>",
   "total_price": "<Item field value Total price>"
 }
 ```
@@ -123,7 +123,19 @@ You can also deploy the required resources using this ARM template:
 ![image](https://user-images.githubusercontent.com/88718044/150156330-7ddb5b02-4eb2-4d5c-a917-3c779c17e706.png)
 
 ### Step 3: Testing the Logic App
+1. From "Run Trigger", click on "Run".
 
+![image](https://user-images.githubusercontent.com/88718044/150158782-5decf1eb-52d7-4b0a-b424-705f6263316f.png)
+
+2. Upload the sample receipt "Receipt.jpg" to the container in the storage account. 
+
+3. Wait for the Logic App flow to finish. 
+
+<img>
+
+4. The resulted CSV file will contain the all line items from the receipt.
+
+<img>
 
 ## License
 For all licensing information refer to [LICENSE]().
