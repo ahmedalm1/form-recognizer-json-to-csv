@@ -25,6 +25,26 @@ You can also deploy the required resources using this ARM template:
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/)
 
 ### Step 2: Setting up the Logic App
+1. Create a blank Logic App. 
+
+![image](https://user-images.githubusercontent.com/88718044/150130109-4f7051fa-f14d-4bcf-ae76-e3832187fa19.png)
+
+2. Search for "Azure Blob Storage" and select "When a blob is added or modified" trigger. 
+
+![image](https://user-images.githubusercontent.com/88718044/150131381-14d8cd63-2f33-4d5d-bcc2-9baf97bcdc0f.png)
+
+3. You will be required to create a connection to the storage account. Fill in the information and click on create to proceed. 
+
+![image](https://user-images.githubusercontent.com/88718044/150132267-337aa540-f7ec-46f4-8a96-ffdd5d87d669.png)
+
+4. You will be required to select a container in the storage account to monitor. Fill in the information and click on New step to proceed.
+
+![image](https://user-images.githubusercontent.com/88718044/150132720-81ded702-b031-49fd-a569-ccd55b44dcc7.png)
+
+5.From the "Azure Blob Storage" list of actions, select "Get blob content".
+
+![image](https://user-images.githubusercontent.com/88718044/150133252-07650a5a-cedd-42d8-894a-e60ec339b183.png)
+
 
 
 ## License
