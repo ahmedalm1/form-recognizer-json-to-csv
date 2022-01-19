@@ -127,7 +127,7 @@ You can also deploy the required resources using this ARM template:
 
 ![image](https://user-images.githubusercontent.com/88718044/150158782-5decf1eb-52d7-4b0a-b424-705f6263316f.png)
 
-2. Upload the sample receipt "Receipt.jpg" to the container in the storage account.
+2. Upload the sample receipt "Receipt.png" to the container in the storage account.
 
 ![Receipt](https://user-images.githubusercontent.com/88718044/150165816-85e7bdc8-4437-4a6a-aa25-03cdc07a2e6d.png)
 
