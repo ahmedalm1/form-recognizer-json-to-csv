@@ -22,7 +22,7 @@ Creat a new Resource Group in your Azure Subscription and provision the followng
 
 You can also deploy the required resources using this ARM template:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAhmedAlmu%2Fform-recognizer-json-to-csv%2Fmain%2FTemplate.json)
 
 ### Step 2: Setting up the Logic App
 1. Create a blank Logic App. 
