@@ -143,3 +143,4 @@ You can also deploy the required resources using this ARM template:
 
 ## License
 For all licensing information refer to [LICENSE]().
+
