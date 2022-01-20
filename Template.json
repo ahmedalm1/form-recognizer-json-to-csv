@@ -142,13 +142,7 @@
                 "tier": "Standard"
             },
             "properties": {
-                "protocolSettings": {
-                    "smb": {}
-                },
-                "cors": {
-                    "corsRules": []
-                },
-                "shareDeleteRetentionPolicy": {
+               "shareDeleteRetentionPolicy": {
                     "enabled": true,
                     "days": 7
                 }
