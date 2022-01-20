@@ -2,16 +2,16 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "workflows_jsontocsv_logicapp_name": {
-            "defaultValue": "jsontocsv-logicapp",
+        "logicapp_name": {
+            "defaultValue": "",
             "type": "String"
         },
-        "storageAccounts_jsontocsvstr_name": {
-            "defaultValue": "jsontocsvstr",
+        "storageaccount_name": {
+            "defaultValue": "",
             "type": "String"
         },
-        "accounts_jsontocsv_formrecognizer_name": {
-            "defaultValue": "jsontocsv-formrecognizer",
+        "formrecognizer_name": {
+            "defaultValue": "",
             "type": "String"
         }
     },
@@ -20,7 +20,7 @@
         {
             "type": "Microsoft.CognitiveServices/accounts",
             "apiVersion": "2021-10-01",
-            "name": "[parameters('accounts_jsontocsv_formrecognizer_name')]",
+            "name": "[parameters('formrecognizer_name')]",
             "location": "uaenorth",
             "sku": {
                 "name": "S0"
@@ -31,7 +31,7 @@
                 "userAssignedIdentities": {}
             },
             "properties": {
-                "customSubDomainName": "[parameters('accounts_jsontocsv_formrecognizer_name')]",
+                "customSubDomainName": "[parameters('formrecognizer_name')]",
                 "networkAcls": {
                     "defaultAction": "Allow",
                     "virtualNetworkRules": [],
@@ -43,7 +43,7 @@
         {
             "type": "Microsoft.Logic/workflows",
             "apiVersion": "2017-07-01",
-            "name": "[parameters('workflows_jsontocsv_logicapp_name')]",
+            "name": "[parameters('logicapp_name')]",
             "location": "uaenorth",
             "properties": {
                 "state": "Enabled",
@@ -61,7 +61,7 @@
         {
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-06-01",
-            "name": "[parameters('storageAccounts_jsontocsvstr_name')]",
+            "name": "[parameters('storageaccount_name')]",
             "location": "uaenorth",
             "sku": {
                 "name": "Standard_LRS",
@@ -101,9 +101,9 @@
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices",
             "apiVersion": "2021-06-01",
-            "name": "[concat(parameters('storageAccounts_jsontocsvstr_name'), '/default')]",
+            "name": "[concat(parameters('storageaccount_name'), '/default')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_jsontocsvstr_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageaccount_name'))]"
             ],
             "sku": {
                 "name": "Standard_LRS",
@@ -133,9 +133,9 @@
         {
             "type": "Microsoft.Storage/storageAccounts/fileServices",
             "apiVersion": "2021-06-01",
-            "name": "[concat(parameters('storageAccounts_jsontocsvstr_name'), '/default')]",
+            "name": "[concat(parameters('storageaccount_name'), '/default')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_jsontocsvstr_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageaccount_name'))]"
             ],
             "sku": {
                 "name": "Standard_LRS",
@@ -157,9 +157,9 @@
         {
             "type": "Microsoft.Storage/storageAccounts/queueServices",
             "apiVersion": "2021-06-01",
-            "name": "[concat(parameters('storageAccounts_jsontocsvstr_name'), '/default')]",
+            "name": "[concat(parameters('storageaccount_name'), '/default')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_jsontocsvstr_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageaccount_name'))]"
             ],
             "properties": {
                 "cors": {
@@ -170,9 +170,9 @@
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices",
             "apiVersion": "2021-06-01",
-            "name": "[concat(parameters('storageAccounts_jsontocsvstr_name'), '/default')]",
+            "name": "[concat(parameters('storageaccount_name'), '/default')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_jsontocsvstr_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageaccount_name'))]"
             ],
             "properties": {
                 "cors": {
